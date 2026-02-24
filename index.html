@@ -5,27 +5,117 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bar Cafetería La Plaza • Carta</title>
   <style>
-    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b0b0c;color:#f3f3f5}
-    .wrap{max-width:720px;margin:0 auto;padding:22px}
-    .card{background:#151518;border:1px solid #232327;border-radius:18px;padding:18px}
-    h1{margin:0 0 8px;font-size:18px}
-    p{margin:0 0 14px;color:#a7a7ad;font-size:13px}
-    .btns{display:flex;gap:10px;flex-wrap:wrap}
-    a{color:#f3f3f5;text-decoration:none;border:1px solid #232327;padding:10px 12px;border-radius:12px}
+    :root{
+      --bg:#07080a; --card:#121318; --text:#f3f3f5; --muted:#a7a7ad; --line:#22242c;
+      --accent:#7ee7ff; --shadow: 0 18px 60px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; min-height:100vh;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(126,231,255,.18), transparent 60%),
+        radial-gradient(900px 500px at 10% 20%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      display:grid; place-items:center;
+      padding:18px;
+    }
+    .wrap{width:min(520px, 100%)}
+    .hero{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(18,19,24,.92), rgba(18,19,24,.78));
+      border-radius:22px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .title{font-weight:900;font-size:20px;text-align:center;margin:0}
+    .sub{color:var(--muted);text-align:center;margin:6px 0 14px;font-size:13px}
+    .list{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+    .btn{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px;
+      padding:14px 14px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      text-decoration:none;
+      color:var(--text);
+      transition: transform .08s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(126,231,255,.55); background: rgba(126,231,255,.06);}
+    .left{display:flex;align-items:center;gap:12px}
+    .flag{
+      width:44px;height:44px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+    .lang{display:flex;flex-direction:column;line-height:1.1}
+    .lang strong{font-size:15px}
+    .lang span{font-size:12px;color:var(--muted);margin-top:4px}
+    .pill{
+      font-size:12px;
+      border:1px solid rgba(255,255,255,.14);
+      padding:7px 10px;
+      border-radius:999px;
+      color:var(--muted);
+    }
+    .foot{margin-top:12px;color:var(--muted);text-align:center;font-size:12px}
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="card">
-      <h1>Bar Cafetería La Plaza</h1>
-      <p>Elige idioma</p>
-      <div class="btns">
-        <a href="menu_es.html">ES Español</a>
-        <a href="menu_en.html">EN English</a>
-        <a href="menu_fr.html">FR Français</a>
-        <a href="menu_de.html">DE Deutsch</a>
-        <a href="menu_it.html">IT Italiano</a>
+    <div class="hero">
+      <h1 class="title">Bar Cafetería La Plaza</h1>
+      <div class="sub">Elige tu idioma</div>
+
+      <div class="list">
+        <a class="btn" href="menu_es.html">
+          <div class="left">
+            <img class="flag" src="assets/espana.png" alt="Español">
+            <div class="lang"><strong>Español</strong><span>ES</span></div>
+          </div>
+          <div class="pill">Abrir</div>
+        </a>
+
+        <a class="btn" href="menu_en.html">
+          <div class="left">
+            <img class="flag" src="assets/inglaterra.png" alt="English">
+            <div class="lang"><strong>English</strong><span>EN</span></div>
+          </div>
+          <div class="pill">Open</div>
+        </a>
+
+        <a class="btn" href="menu_fr.html">
+          <div class="left">
+            <img class="flag" src="assets/francia.png" alt="Français">
+            <div class="lang"><strong>Français</strong><span>FR</span></div>
+          </div>
+          <div class="pill">Ouvrir</div>
+        </a>
+
+        <a class="btn" href="menu_de.html">
+          <div class="left">
+            <img class="flag" src="assets/alemania.png" alt="Deutsch">
+            <div class="lang"><strong>Deutsch</strong><span>DE</span></div>
+          </div>
+          <div class="pill">Öffnen</div>
+        </a>
+
+        <a class="btn" href="menu_it.html">
+          <div class="left">
+            <img class="flag" src="assets/italia.png" alt="Italiano">
+            <div class="lang"><strong>Italiano</strong><span>IT</span></div>
+          </div>
+          <div class="pill">Apri</div>
+        </a>
       </div>
+
+      <div class="foot">💡 Consejo: guarda esta página en favoritos</div>
     </div>
   </div>
 </body>
