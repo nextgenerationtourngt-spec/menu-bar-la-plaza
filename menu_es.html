@@ -1,0 +1,231 @@
+<!doctype html><html lang='es'><head><meta charset='utf-8'/><meta name='viewport' content='width=device-width,initial-scale=1'/><title>Carta • Bar Cafetería La Plaza</title><style>
+    :root{
+      --bg:#0b0b0c; --card:#151518; --muted:#a7a7ad; --text:#f3f3f5; --line:#232327; --accent:#7ee7ff;
+      --top1: rgba(10,16,22,0.98); --top2: rgba(10,16,22,0.72);
+      --chip:#0f0f12;
+    }
+    [data-theme="light"]{
+      --bg:#f6f7fb; --card:#ffffff; --muted:#5e616a; --text:#101114; --line:#e7e8ee; --accent:#0aa3c2;
+      --top1: rgba(235,241,248,0.98); --top2: rgba(235,241,248,0.80);
+      --chip:#f2f3f7;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    .wrap{max-width:820px;margin:0 auto;padding:18px}
+    .top{
+      position:sticky;top:0;
+      background:linear-gradient(180deg,var(--top1),var(--top2));
+      backdrop-filter: blur(10px);
+      padding:12px 18px;border-bottom:1px solid var(--line);z-index:10
+    }
+    .venue{font-weight:800;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:var(--muted);text-align:center}
+    .brand{font-weight:900;letter-spacing:0.3px;font-size:18px;text-align:center;margin-top:4px}
+    .sub{color:var(--muted);font-size:12px;margin-top:2px;text-align:center}
+    .bar{
+      margin-top:10px;
+      display:flex;gap:10px;flex-wrap:wrap;
+      justify-content:center;align-items:center;
+    }
+    .lang{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .lang a{
+      color:var(--text);text-decoration:none;border:1px solid var(--line);
+      padding:8px 10px;border-radius:12px;font-size:13px;background:transparent
+    }
+    .lang a.active{border-color:var(--accent)}
+    .themeBtn{
+      border:1px solid var(--line);background:var(--chip);color:var(--text);
+      padding:8px 10px;border-radius:12px;font-size:13px;cursor:pointer
+    }
+    .sec{margin-top:16px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+    .secH{display:flex;gap:12px;align-items:center;padding:14px 14px;border-bottom:1px solid var(--line)}
+    .ico{
+      width:64px;height:64px;border-radius:18px;
+      display:grid;place-items:center;background:var(--chip);
+      border:1px solid var(--line);flex:0 0 auto
+    }
+    .ico img{width:52px;height:52px;object-fit:contain}
+    .secT{font-weight:900;font-size:16px}
+    .rows{padding:6px 14px 12px}
+    .row{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.10)}
+    [data-theme="light"] .row{border-bottom:1px dashed rgba(0,0,0,0.10)}
+    .row:last-child{border-bottom:0}
+    .line1{display:flex;gap:10px;justify-content:space-between;align-items:flex-start}
+    .name{font-size:15px;line-height:1.2}
+    .price{font-variant-numeric:tabular-nums;font-weight:900;white-space:nowrap}
+    .desc{margin-top:6px;color:var(--muted);font-size:12.5px;line-height:1.25;max-width:92%}
+    .foot{color:var(--muted);font-size:12px;margin:16px 2px 4px;text-align:center}
+    </style></head><body><div class='top'><div class='venue'>Bar Cafetería La Plaza</div><div class='brand'>Carta</div><div class='sub'>Escanea • Elige idioma • Mira la carta</div><div class='bar'><div class='lang'><a href='menu_es.html' class='active'>ES</a><a href='menu_en.html' class=''>EN</a><a href='menu_fr.html' class=''>FR</a><a href='menu_de.html' class=''>DE</a><a href='menu_it.html' class=''>IT</a></div><button id='themeBtn' class='themeBtn' onclick='toggleTheme()'>🌙</button></div></div><div class='wrap'>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/helados.png' alt='Helados'/></div><div><div class='secT'>Helados</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>KIT KAT CONO</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>EXTREME</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TOBLERONE</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>PIRULO</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>MAXIBON</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>MILKA</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>OREO</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TARRINA</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>MAXIBON POPS</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SMART</div><div class='price'>2,90 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CHOCO BLACK</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FANTAMITOS</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>NUT</div><div class='price'>2,90 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/bocadillos.png' alt='Bocadillos'/></div><div><div class='secT'>Bocadillos</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>BOC. LOMO QUESO</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. CARNE QUESO</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. BACON QUESO</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. PESCADO</div><div class='price'>4,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. PECHUGA</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>RACING</div><div class='price'>5,00 €</div></div><div class='desc'>Carne, pescado, pechuga o lomo.</div></div>
+<div class='row'><div class='line1'><div class='name'>BOC QUESO TOMATE</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. JAMON SERRANO QUESO</div><div class='price'>4,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. JAMON SERRANO TOMATE</div><div class='price'>4,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. ENVUELTO JAMON QUESO</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOC. TORTILLA</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>PINCHO DE TORTILLA</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TOSTADAS</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>EXTRAS</div><div class='price'>1,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/sandwich.png' alt='Sándwiches'/></div><div><div class='secT'>Sándwiches</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>SANDW. MIXTO</div><div class='price'>2,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SANDW. VEGETAL</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SANDW. VEGETAL ATUN</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SANDW. ATUN MILLO Y MAYONESA</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>MIXTO CON HUEVO</div><div class='price'>3,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/croissant.png' alt='Croissants'/></div><div><div class='secT'>Croissants</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>CROI. MIXTO</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CROI. VEGETAL</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CROI. VEGETAL CON ATUN</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CROI. MANTEQUILLA Y MERMELADA</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CROI. SOLO</div><div class='price'>2,50 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/hamburguesa.png' alt='Hamburguesas'/></div><div><div class='secT'>Hamburguesas</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>HAMB. NORMAL</div><div class='price'>5,00 €</div></div><div class='desc'>Carne y queso.</div></div>
+<div class='row'><div class='line1'><div class='name'>HAMB. ESPECIAL</div><div class='price'>6,00 €</div></div><div class='desc'>Carne, queso, tomate, jamón, beicon, huevo, lechuga y salsas.</div></div>
+<div class='row'><div class='line1'><div class='name'>HAMBURGUESA ESPECIAL CON PAPAS FRITAS</div><div class='price'>8,50 €</div></div><div class='desc'>Carne, queso, tomate, jamón, beicon, huevo, lechuga y salsas.</div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/pizza.png' alt='Pizzas'/></div><div><div class='secT'>Pizzas</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>MARGARITA</div><div class='price'>7,50 €</div></div><div class='desc'>Queso y tomate.</div></div>
+<div class='row'><div class='line1'><div class='name'>VEGETAL</div><div class='price'>10,00 €</div></div><div class='desc'>Queso, tomate, cebolla, pimiento, tomate cherry, alcachofa y maíz.</div></div>
+<div class='row'><div class='line1'><div class='name'>PIZZA ATUN</div><div class='price'>10,00 €</div></div><div class='desc'>Queso, tomate, atún, pimiento, aceitunas y maíz.</div></div>
+<div class='row'><div class='line1'><div class='name'>PIZZA MARINERA</div><div class='price'>10,00 €</div></div><div class='desc'>Queso, tomate, gambas, mejillones, atún y cangrejo.</div></div>
+<div class='row'><div class='line1'><div class='name'>PIZZA BARBACOA</div><div class='price'>10,00 €</div></div><div class='desc'>Queso, tomate, boloñesa, beicon y salsa barbacoa.</div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/platoscombinados.png' alt='Platos combinados'/></div><div><div class='secT'>Platos combinados</div><div class='desc'>A elegir: croquetas, churros de pescado, bistec ternera, filetes de lomo, filetes de pescado + papas fritas o ensalada.</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>CROQUETAS</div><div class='price'>10,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CHURROS DE PESCADO</div><div class='price'>10,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BISTEC TERNERA</div><div class='price'>10,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FILETES DE LOMO</div><div class='price'>10,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FILETES DE PESCADO</div><div class='price'>10,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FILETE DE POLLO</div><div class='price'>10,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/racion.png' alt='Raciones'/></div><div><div class='secT'>Raciones</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>MEDIA RACION</div><div class='price'>6,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>RACION</div><div class='price'>10,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/cafe.png' alt='Cafés e infusiones'/></div><div><div class='secT'>Cafés e infusiones</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>EXPRESO</div><div class='price'>1,20 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAFE SOLO</div><div class='price'>1,20 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CORTADO LARGO</div><div class='price'>1,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>DESCAFEINADO</div><div class='price'>1,40 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAFE CON LECHE</div><div class='price'>1,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>COLA CAO</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>INFUSION</div><div class='price'>1,30 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAPUCHINNO</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BARRAQUILLO</div><div class='price'>4,00 €</div></div><div class='desc'>Café con whisky 43 y leche condensada.</div></div>
+<div class='row'><div class='line1'><div class='name'>Café con leche y leche</div><div class='price'>1,60 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CORTADO CORTO</div><div class='price'>1,40 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>Café con leche y leche corto</div><div class='price'>1,30 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAFE CON HIELO</div><div class='price'>1,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AMERICANO</div><div class='price'>1,60 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAFE PARA LLEVAR</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CARAJILLO</div><div class='price'>1,60 €</div></div><div class='desc'>Café con whisky 43.</div></div>
+<div class='row'><div class='line1'><div class='name'>TE ECOLOGICO</div><div class='price'>2,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/smoothies.png' alt='Zumos y smoothies'/></div><div><div class='secT'>Zumos y smoothies</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>ZUMO NARANJA GRANDE</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>ZUMO BITOFRUTAS</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SMOTHIES NATURALES</div><div class='price'>5,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/refrescos.png' alt='Refrescos'/></div><div><div class='secT'>Refrescos</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>COCACOLA</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FANTA</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>APPLETISSER</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SEVEN UP</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>NESTEA</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AQUARIUS</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TONICAS</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SPRITE</div><div class='price'>3,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>COCACOLA (LATA)</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>COLA LIGHT</div><div class='price'>2,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>COLA ZERO</div><div class='price'>2,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>FANTA (LATA)</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CLIPPER FRESA</div><div class='price'>2,80 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AQUARIUS (LATA)</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>RED BULL</div><div class='price'>3,00 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/agua.png' alt='Aguas'/></div><div><div class='secT'>Aguas</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>AGUA PEQUEÑA</div><div class='price'>1,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AGUA GRANDE</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AGUA CON GAS PEQUEÑA</div><div class='price'>1,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>AGUA CON GAS GRANDE</div><div class='price'>2,50 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/cerveza.png' alt='Cervezas'/></div><div><div class='secT'>Cervezas</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>CUBATA ESPECIAL</div><div class='price'>7,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TROPICAL</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>DORADA</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>BOTELLIN</div><div class='price'>1,50 €</div></div><div class='desc'>Tropical (botellín pequeño).</div></div>
+<div class='row'><div class='line1'><div class='name'>SIN ALCOHOL 0,0</div><div class='price'>2,20 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TROPICAL LIMON</div><div class='price'>2,20 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CRUZCAMPO LIMON</div><div class='price'>2,20 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CERVEZA LATA</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>ESPECIAL</div><div class='price'>2,60 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/copas.png' alt='Copas y alcohol'/></div><div><div class='secT'>Copas y alcohol</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>COPAS</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CHUPITO</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TRAGOS</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CUBATAS NORMALES</div><div class='price'>6,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>SANGRIA</div><div class='price'>8,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>MARTINI</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>CAÑA</div><div class='price'>2,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>JARRA</div><div class='price'>4,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>VINO PAIS</div><div class='price'>2,00 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>COPA DE VINO</div><div class='price'>3,50 €</div></div></div>
+</div></section>
+<section class='sec'><div class='secH'><div class='ico'><img src='assets/snacks.png' alt='Snacks y dulces'/></div><div><div class='secT'>Snacks y dulces</div></div></div><div class='rows'>
+<div class='row'><div class='line1'><div class='name'>HOJALDRE</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>PAQUETE PAPAS</div><div class='price'>1,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>TARTA</div><div class='price'>3,50 €</div></div></div>
+<div class='row'><div class='line1'><div class='name'>NAPOLITANA</div><div class='price'>2,50 €</div></div></div>
+</div></section>
+<div class='foot'>Precios en euros. *Imágenes ilustrativas.</div>
+</div>
+    <script>
+      (function() {
+        const root = document.documentElement;
+        const saved = localStorage.getItem('menu_theme');
+        if(saved) root.setAttribute('data-theme', saved);
+        else root.setAttribute('data-theme','dark');
+
+        function setTheme(t) {
+          root.setAttribute('data-theme', t);
+          localStorage.setItem('menu_theme', t);
+          const btn = document.getElementById('themeBtn');
+          if(btn) btn.textContent = (t === 'dark') ? '☀️ Claro' : '🌙 Oscuro';
+        }
+
+        window.toggleTheme = function() {
+          const cur = root.getAttribute('data-theme') || 'dark';
+          setTheme(cur === 'dark' ? 'light' : 'dark');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const cur = root.getAttribute('data-theme') || 'dark';
+          const btn = document.getElementById('themeBtn');
+          if(btn) btn.textContent = (cur === 'dark') ? '☀️ Claro' : '🌙 Oscuro';
+        });
+      })();
+    </script>
+    </body></html>
